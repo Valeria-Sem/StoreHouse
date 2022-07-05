@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="735.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/14"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.store.controller.AdminController">
+    <TabPane layoutX="14.0" layoutY="105.0" prefHeight="615.0" prefWidth="795.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Работники">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="579.0" prefWidth="795.0">
+                <TableView fx:id="employeeTable" layoutX="14.0" layoutY="48.0" prefHeight="492.0"
+                           prefWidth="438.0"/>
+                <Label layoutX="487.0" layoutY="48.0" prefHeight="36.0" prefWidth="307.0"
+                       text="Работа с данными сотрудников">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="loginTxt" layoutX="499.0" layoutY="135.0" prefHeight="26.0" prefWidth="225.0"/>
+                <TextField fx:id="fioTxt" layoutX="498.0" layoutY="200.0" prefHeight="26.0" prefWidth="226.0"/>
+                <ComboBox fx:id="positionBox" layoutX="498.0" layoutY="267.0" prefHeight="26.0"
+                          prefWidth="227.0"/>
+                <Button layoutX="484.0" layoutY="324.0" mnemonicParsing="false" prefHeight="26.0"
+                        prefWidth="128.0"
+                        text="Добавить"
+                        onAction="#addNewEmployee"/>
+                <Button layoutX="626.0" layoutY="325.0" mnemonicParsing="false" prefHeight="26.0"
+                        prefWidth="115.0"
+                        text="Обновить"
+                onAction="#updateEmployee"/>
+                <Button layoutX="543.0" layoutY="379.0" mnemonicParsing="false" prefHeight="26.0"
+                        prefWidth="139.0"
+                        text="Удалить"
+                        onAction="#deleteEmployee"/>
+                <Label layoutX="499.0" layoutY="105.0" prefHeight="18.0" prefWidth="168.0" text="Логин"/>
+                <Label layoutX="498.0" layoutY="175.0" prefHeight="18.0" prefWidth="209.0" text="ФИО"/>
+                <Label layoutX="499.0" layoutY="243.0" prefHeight="18.0" prefWidth="227.0" text="Должность"/>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Рабочие позиции">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </Tab>
+        <Tab text="Поставщики">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </Tab>
+    </TabPane>
+    <Label fx:id="welcomeLabel" layoutX="253.0" layoutY="14.0" prefHeight="36.0" prefWidth="314.0">
+        <font>
+          <Font size="14.0"/>
+        </font>
+    </Label>
+</AnchorPane>
